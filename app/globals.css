@@ -21,81 +21,28 @@
 
 :root {
   /* --- Brand colors (change these per site) --- */
-  --brand-primary:            oklch(0.55 0.25 250);   /* main CTA / buttons    */
-  --brand-primary-foreground: oklch(0.985 0 0);       /* text ON primary       */
-  --brand-secondary:          oklch(0.92 0.05 250);   /* subtle tint           */
-  --brand-secondary-foreground: oklch(0.20 0 0);      /* text ON secondary     */
-  --brand-accent:             oklch(0.65 0.20 200);   /* highlights / links    */
-  --brand-accent-foreground:  oklch(0.985 0 0);       /* text ON accent        */
+  --brand-primary:              #ccff00;   /* main CTA / buttons    */
+  --brand-primary-foreground:   #3a4a00;   /* text ON primary       */
+  --brand-secondary:            #679cff;   /* secondary / links     */
+  --brand-secondary-foreground: #001f4a;   /* text ON secondary     */
+  --brand-accent:               #ccff00;   /* highlights            */
+  --brand-accent-foreground:    #3a4a00;   /* text ON accent        */
 
   /* --- Border radius (change for sharp vs rounded feel) --- */
-  --radius: 0.625rem;
+  --radius: 0.25rem;
 
   /* --------------------------------------------------------
      shadcn/ui semantic tokens — wired to brand colors above.
      You rarely need to change these directly.
      -------------------------------------------------------- */
-  --background:          oklch(1 0 0);
-  --foreground:          oklch(0.145 0 0);
+  --background:          #0e0e0e;
+  --foreground:          #ffffff;
 
-  --card:                oklch(1 0 0);
-  --card-foreground:     oklch(0.145 0 0);
+  --card:                #1a1a1a;
+  --card-foreground:     #ffffff;
 
-  --popover:             oklch(1 0 0);
-  --popover-foreground:  oklch(0.145 0 0);
-
-  --primary:             var(--brand-primary);
-  --primary-foreground:  var(--brand-primary-foreground);
-
-  --secondary:           var(--brand-secondary);
-  --secondary-foreground: var(--brand-secondary-foreground);
-
-  --muted:               oklch(0.97 0 0);
-  --muted-foreground:    oklch(0.556 0 0);
-
-  --accent:              var(--brand-accent);
-  --accent-foreground:   var(--brand-accent-foreground);
-
-  --destructive:         oklch(0.577 0.245 27.325);
-
-  --border:              oklch(0.922 0 0);
-  --input:               oklch(0.922 0 0);
-  --ring:                var(--brand-primary);
-
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-
-  --sidebar:                      oklch(0.985 0 0);
-  --sidebar-foreground:           oklch(0.145 0 0);
-  --sidebar-primary:              var(--brand-primary);
-  --sidebar-primary-foreground:   var(--brand-primary-foreground);
-  --sidebar-accent:               oklch(0.97 0 0);
-  --sidebar-accent-foreground:    oklch(0.205 0 0);
-  --sidebar-border:               oklch(0.922 0 0);
-  --sidebar-ring:                 var(--brand-primary);
-}
-
-.dark {
-  /* --- Brand colors dark mode (optional overrides) --- */
-  --brand-primary:            oklch(0.65 0.20 250);
-  --brand-primary-foreground: oklch(0.145 0 0);
-  --brand-secondary:          oklch(0.25 0.05 250);
-  --brand-secondary-foreground: oklch(0.985 0 0);
-  --brand-accent:             oklch(0.60 0.18 200);
-  --brand-accent-foreground:  oklch(0.985 0 0);
-
-  /* --- shadcn/ui semantic tokens dark --- */
-  --background:          oklch(0.145 0 0);
-  --foreground:          oklch(0.985 0 0);
-
-  --card:                oklch(0.205 0 0);
-  --card-foreground:     oklch(0.985 0 0);
-
-  --popover:             oklch(0.205 0 0);
-  --popover-foreground:  oklch(0.985 0 0);
+  --popover:             #1a1a1a;
+  --popover-foreground:  #ffffff;
 
   --primary:             var(--brand-primary);
   --primary-foreground:  var(--brand-primary-foreground);
@@ -103,31 +50,31 @@
   --secondary:           var(--brand-secondary);
   --secondary-foreground: var(--brand-secondary-foreground);
 
-  --muted:               oklch(0.269 0 0);
-  --muted-foreground:    oklch(0.708 0 0);
+  --muted:               #262626;
+  --muted-foreground:    #adaaaa;
 
   --accent:              var(--brand-accent);
   --accent-foreground:   var(--brand-accent-foreground);
 
-  --destructive:         oklch(0.704 0.191 22.216);
+  --destructive:         #ff7351;
 
-  --border:              oklch(1 0 0 / 10%);
-  --input:               oklch(1 0 0 / 15%);
+  --border:              #484847;
+  --input:               #262626;
   --ring:                var(--brand-primary);
 
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
+  --chart-1: #ccff00;
+  --chart-2: #679cff;
+  --chart-3: #fce047;
+  --chart-4: #ff7351;
+  --chart-5: #adaaaa;
 
-  --sidebar:                      oklch(0.205 0 0);
-  --sidebar-foreground:           oklch(0.985 0 0);
+  --sidebar:                      #131313;
+  --sidebar-foreground:           #ffffff;
   --sidebar-primary:              var(--brand-primary);
   --sidebar-primary-foreground:   var(--brand-primary-foreground);
-  --sidebar-accent:               oklch(0.269 0 0);
-  --sidebar-accent-foreground:    oklch(0.985 0 0);
-  --sidebar-border:               oklch(1 0 0 / 10%);
+  --sidebar-accent:               #262626;
+  --sidebar-accent-foreground:    #ffffff;
+  --sidebar-border:               #484847;
   --sidebar-ring:                 var(--brand-primary);
 }
 
