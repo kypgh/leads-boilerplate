@@ -4,9 +4,9 @@ import { Resend } from 'resend'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: NextRequest) {
-  const { name, email, phone, message } = await req.json()
+  const { name, email, business, message } = await req.json()
 
-  if (!name || !email || !phone) {
+  if (!name || !email) {
     return NextResponse.json({ message: 'Missing required fields' }, { status: 400 })
   }
 
@@ -14,12 +14,12 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: process.env.FROM_EMAIL!,
       to: [process.env.OWNER_EMAIL!],
-      subject: `New Lead - ${name}`,
+      subject: `New Lead — ${name}${business ? ` (${business})` : ''}`,
       html: `
         <h2>New Lead</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
+        ${business ? `<p><strong>Business:</strong> ${business}</p>` : ''}
         <p><strong>Message:</strong> ${message || 'No message provided'}</p>
       `,
     })

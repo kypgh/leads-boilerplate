@@ -119,6 +119,34 @@
   --radius-4xl: calc(var(--radius) * 2.6);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-headline: var(--font-space-grotesk);
+  --font-body: var(--font-manrope);
+  /* Design system surface & semantic colors */
+  --color-surface: #0e0e0e;
+  --color-surface-container-lowest: #000000;
+  --color-surface-container-low: #131313;
+  --color-surface-container: #1a1a1a;
+  --color-surface-container-high: #20201f;
+  --color-surface-container-highest: #262626;
+  --color-surface-variant: #262626;
+  --color-surface-bright: #2c2c2c;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #adaaaa;
+  --color-on-primary: #3a4a00;
+  --color-on-primary-container: #4a5e00;
+  --color-on-secondary: #001f4a;
+  --color-on-secondary-container: #f7f7ff;
+  --color-on-background: #ffffff;
+  --color-primary-container: #ccff00;
+  --color-primary-dim: #beee00;
+  --color-secondary-container: #005bc1;
+  --color-secondary-dim: #0070eb;
+  --color-error: #ff7351;
+  --color-error-container: #b92902;
+  --color-outline: #767575;
+  --color-outline-variant: #484847;
+  --color-tertiary: #ffeea5;
+  --color-tertiary-container: #fce047;
 }
 
 @layer base {
@@ -131,4 +159,14 @@
   html {
     @apply font-sans;
   }
+}
+
+.kinetic-gradient {
+  background: linear-gradient(135deg, #ccff00 0%, #beee00 100%);
+}
+
+.glass-panel {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
