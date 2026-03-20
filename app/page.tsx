@@ -1,7 +1,7 @@
 'use client'
 
 import { useContactModal } from '@/context/contact-modal'
-
+// 
 export default function Home() {
   const { open } = useContactModal()
 
